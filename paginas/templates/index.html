@@ -1,10 +1,11 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html class="no-js" lang="zxx">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Barber HTML-5 Template</title>
+    <title>Bem vindo a Barbearia do Fabricio</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="site.webmanifest" />
@@ -47,7 +48,7 @@
               <!-- Logo -->
               <div class="col-xl-2 col-lg-2 col-md-1">
                 <div class="logo">
-                  <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
+                  <a href="{% url 'paginas-index' %}"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
                 </div>
               </div>
               <div class="col-xl-10 col-lg-10 col-md-10">
@@ -57,10 +58,10 @@
                     <nav>
                       <ul id="navigation">
                         <li class="active">
-                          <a href="index.html">Inicio</a>
+                          <a href="{% url 'paginas-index' %}">Inicio</a>
                         </li>
                         <li>
-                          <a href="about.html">Sobre</a>
+                          <a href="{% url 'paginas-sobre' %}">Sobre</a>
                         </li>
                         <li>
                           <a href="services.html">Serviços</a>
@@ -406,7 +407,7 @@
       </div>
       <!-- Gallery Area End -->
       <!-- Cut Details Start -->
-      <div class="cut-details section-bg section-padding2" data-background="{% static "assets/img/gallery/section_bg02.png"%}">
+      <div class="cut-details section-bg section-padding2" data-background="{% static 'assets/img/gallery/section_bg02.png' %}">
         <div class="container">
           <div class="cut-active dot-style">
             <div class="single-cut">
@@ -463,7 +464,7 @@
               <div class="home-blog-single mb-30">
                 <div class="blog-img-cap">
                   <div class="blog-img">
-                    <img src="{% static "assets/img/gallery/home-blog1.png" %}" alt="" />
+                    <img src="{% static 'assets/img/gallery/home-blog1.png' %}" alt="" />
                     <!-- Blog date -->
                     <div class="blog-date text-center">
                       <span>24</span>
@@ -482,7 +483,7 @@
               <div class="home-blog-single mb-30">
                 <div class="blog-img-cap">
                   <div class="blog-img">
-                    <img src="{% static "assets/img/gallery/home-blog2.png" %}" alt="" />
+                    <img src="{% static 'assets/img/gallery/home-blog2.png' %}" alt="" />
                     <!-- Blog date -->
                     <div class="blog-date text-center">
                       <span>24</span>
@@ -504,7 +505,7 @@
     </main>
     <footer>
       <!-- ? Footer Start -->
-      <div class="footer-area section-bg" data-background="{% static "assets/img/gallery/footer_bg.png" %}">
+      <div class="footer-area section-bg" data-background="{% static 'assets/img/gallery/footer_bg.png' %}">
         <div class="container">
           <div class="footer-top footer-padding">
             <div class="row d-flex justify-content-between">
@@ -512,7 +513,7 @@
                 <div class="single-footer-caption mb-50">
                   <!-- logo -->
                   <div class="footer-logo">
-                    <a href="index.html"><img src="{% static "assets/img/logo/logo2_footer.png" %}" alt="" /></a>
+                    <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt="" /></a>
                   </div>
                   <div class="footer-tittle">
                     <div class="footer-pera">
@@ -605,7 +606,7 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>
                                       document.write(new Date().getFullYear())
-                                    </script>Todos direitos reservados  | Fabricio Lima  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+                                    </script>Todos direitos reservados | Fabricio Lima <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                   </p>
                 </div>
