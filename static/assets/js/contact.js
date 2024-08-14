@@ -8,6 +8,7 @@ $(document).ready(function(){
         return this.optional(element) || /^\bcat\b$/.test(value)
     }, "type the correct answer -_-");
 
+    
     // validate contactForm form
     $(function() {
         $('#contactForm').validate({
@@ -35,23 +36,23 @@ $(document).ready(function(){
             },
             messages: {
                 name: {
-                    required: "come on, you have a name, don't you?",
-                    minlength: "your name must consist of at least 2 characters"
+                    required: "vamos lá, você tem um nome, não é?",
+                    minlength: "seu nome deve ter pelo menos 2 caracteres"
                 },
                 subject: {
-                    required: "come on, you have a subject, don't you?",
+                    required: "obrigatório: qual é, você tem assunto, não é?",
                     minlength: "your subject must consist of at least 4 characters"
                 },
                 number: {
-                    required: "come on, you have a number, don't you?",
-                    minlength: "your Number must consist of at least 5 characters"
+                    required: "vamos lá, você tem um número, não é?",
+                    minlength: "seu número deve consistir em pelo menos 5 caracteres"
                 },
                 email: {
-                    required: "no email, no message"
+                    required: "sem e-mail, sem mensagem"
                 },
                 message: {
-                    required: "um...yea, you have to write something to send this form.",
-                    minlength: "thats all? really?"
+                    required: "hum... sim, você precisa escrever algo para enviar este formulário.",
+                    minlength: "isso é tudo? realmente?"
                 }
             },
             submitHandler: function(form) {

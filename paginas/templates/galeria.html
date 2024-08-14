@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Sobre</title>
+    <title>Galeria</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="manifest" href="site.webmanifest" />
@@ -25,14 +25,14 @@
     <link rel="stylesheet" href="{% static 'assets/css/nice-select.css' %}" />
     <link rel="stylesheet" href="{% static 'assets/css/style.css' %}" />
   </head>
-   <!-- ? Preloader Start -->
   <body>
-       <div id="preloader-active">
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
       <div class="preloader d-flex align-items-center justify-content-center">
         <div class="preloader-inner position-relative">
           <div class="preloader-circle"></div>
           <div class="preloader-img pere-text">
-            <img src="assets/img/logo/loder.png" alt="" />
+            <img src="{% static 'assets/img/logo/loder.png' %}" alt="" />
           </div>
         </div>
       </div>
@@ -47,7 +47,7 @@
               <!-- Logo -->
               <div class="col-xl-2 col-lg-2 col-md-1">
                 <div class="logo">
-                  <a href="index.html"><img src="assets/img/logo/logo.png" alt="" /></a>
+                  <a href="index.html"><img src="{% static 'assets/img/logo/logo.png' %}" alt="" /></a>
                 </div>
               </div>
               <div class="col-xl-10 col-lg-10 col-md-10">
@@ -56,19 +56,20 @@
                   <div class="main-menu f-right d-none d-lg-block">
                     <nav>
                       <ul id="navigation">
-                        <li class="active">
+                        <li>
                           <a href="{% url 'paginas-index' %}">Início</a>
                         </li>
                         <li>
                           <a href="{% url 'paginas-sobre' %}">Sobre</a>
                         </li>
                         <li>
-                          <a href="services.html">Services</a>
+                          <a href="#">Serviços</a>
                         </li>
-                        <li>
+                        <li class="active">
                           <a href="{% url 'paginas-galeria' %}">Galeria</a>
                         </li>
-                       <li>
+
+                        <li>
                           <a href="{% url 'paginas-contato' %}">Contato</a>
                         </li>
                       </ul>
@@ -97,7 +98,7 @@
             <div class="row">
               <div class="col-xl-12">
                 <div class="hero-cap hero-cap2 pt-70 text-center">
-                  <h2>Sobre NÓS</h2>
+                  <h2>Portfolio</h2>
                 </div>
               </div>
             </div>
@@ -105,84 +106,42 @@
         </div>
       </div>
       <!-- Hero End -->
-      <!-- ? About Area Start -->
-      <section class="about-area section-padding30 position-relative">
+      <!-- ? Gallery Area Start -->
+      <div class="gallery-area section-padding30">
         <div class="container">
-          <div class="row align-items-center">
-            <div class="col-lg-6 col-md-11">
-              <!-- about-img -->
-              <div class="about-img">
-                <img src="{% static 'assets/img/gallery/about.png' %}" alt="" />
-              </div>
-            </div>
-            <div class="col-lg-6 col-md-12">
-              <div class="about-caption">
-                <!-- Section Tittle -->
-                <div class="section-tittle section-tittle3 mb-35">
-                  <span>Sobre nossa Babearia</span>
-                  <h2>Bem-vindo à Brição Barbearia – onde tradição e estilo se encontram para criar experiências únicas.</h2>
-                </div>
-                <p class="mb-30 pera-bottom">Fundada em 2024, a Brição Barbearia nasceu da paixão por proporcionar não apenas cortes impecáveis, mas também uma experiência que valoriza o conforto e a satisfação de nossos clientes. Nossos barbeiros são mestres na arte de cortar, aparar e estilizar, e cada um deles traz uma combinação única de habilidades e criatividade para garantir que você saia daqui sentindo-se renovado e confiante.</p>
-                <p class="pera-top mb-50">Acreditamos que a barbearia é muito mais do que um lugar para um corte de cabelo – é um espaço de autoconfiança e expressão pessoal.</p>
-                <img src="assets/img/gallery/signature.png" alt="" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- About Shape -->
-        <div class="about-shape">
-          <img src="{% static 'assets/img/gallery/about-shape.png' %}" alt="" />
-        </div>
-      </section>
-      <!-- About-2 Area End -->
-      <!-- ? Services Area Start -->
-      <section class="service-area pb-170">
-        <div class="container">
-          <!-- Section Tittle -->
-
-          <!-- Section caption -->
           <div class="row">
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="services-caption text-center mb-30">
-                <div class="service-icon">
-                  <i class="flaticon-healthcare-and-medical"></i>
-                </div>
-                <div class="service-cap">
-                  <h4><a href="#">Corte de cabelo estiloso</a></h4>
-                  <p>Cortes de Cabelo Personalizados: Desde o clássico ao moderno, nosso time está pronto para criar o corte perfeito para você.</p>
-                </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="box snake mb-30">
+                <div class="gallery-img" style="background-image: url( {% static 'assets/img/gallery/gallery1.png' %});"></div>
+                <div class="overlay"></div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="services-caption active text-center mb-30">
-                <div class="service-icon">
-                  <i class="flaticon-healthcare-and-medical"></i>
-                </div>
-                <div class="service-cap">
-                  <h4><a href="#">Massagem</a></h4>
-                  <p>Tratamentos Especiais: Máscaras faciais e esfoliações para um toque extra de cuidado e relaxamento.</p>
-                </div>
+            <div class="col-lg-8 col-md-6 col-sm-6">
+              <div class="box snake mb-30">
+                <div class="gallery-img" style="background-image: url( {% static 'assets/img/gallery/gallery2.png' %});"></div>
+                <div class="overlay"></div>
               </div>
             </div>
-            <div class="col-xl-4 col-lg-4 col-md-6">
-              <div class="services-caption text-center mb-30">
-                <div class="service-icon">
-                  <i class="flaticon-healthcare-and-medical"></i>
-                </div>
-                <div class="service-cap">
-                  <h4><a href="#">Estilo de barba</a></h4>
-                  <p>Aparar e Modelar Barba: Cuidados detalhados para manter sua barba impecável e bem posicionada.</p>
-                </div>
+            <div class="col-lg-8 col-md-6 col-sm-6">
+              <div class="box snake mb-30">
+                <div class="gallery-img" style="background-image: url( {% static 'assets/img/gallery/gallery3.png' %});"></div>
+                <div class="overlay"></div>
+              </div>
+            </div>
+            <div class="col-lg-4 col-md-6 col-sm-6">
+              <div class="box snake mb-30">
+                <div class="gallery-img" style="background-image: url( {% static 'assets/img/gallery/gallery4.png' %});"></div>
+                <div class="overlay"></div>
               </div>
             </div>
           </div>
         </div>
-      </section> 
-      
-    
-      <!-- ? Footer Start -->
+      </div>
+      <!-- Gallery Area End -->
+    </main>
     <footer>
-      <div class="footer-area section-bg" data-background="{% static 'assets/img/gallery/footer_bg.png'%}">
+      <!-- ? Footer Start -->
+      <div class="footer-area section-bg" data-background="{% static 'assets/img/gallery/footer_bg.png' %}">
         <div class="container">
           <div class="footer-top footer-padding">
             <div class="row d-flex justify-content-between">
@@ -190,38 +149,38 @@
                 <div class="single-footer-caption mb-50">
                   <!-- logo -->
                   <div class="footer-logo">
-                    <a href="index.html"><img src="{%static 'assets/img/logo/logo2_footer.png'%}" alt="" /></a>
+                    <a href="index.html"><img src="{% static 'assets/img/logo/logo2_footer.png' %}" alt="" /></a>
                   </div>
                   <div class="footer-tittle">
                     <div class="footer-pera">
-                      <p class="info1">Receba atualizações e últimas notícias diretamente do Basta entrar.</p>
+                      <p class="info1">Receive updates and latest news direct from Simply enter.</p>
                     </div>
                   </div>
                   <div class="footer-number">
-                    <h4><span>19</span>99257 1719</h4>
-                    <p>fabricio.dev007l@gmail.com</p>
+                    <h4><span>+564</span>7885 3222</h4>
+                    <p>youremail@gmail.com</p>
                   </div>
                 </div>
               </div>
               <div class="col-xl-2 col-lg-2 col-md-3 col-sm-5">
                 <div class="single-footer-caption mb-50">
                   <div class="footer-tittle">
-                    <h4>Localização</h4>
+                    <h4>Location</h4>
                     <ul>
                       <li>
-                        <a href="#">Avançado</a>
+                        <a href="#">Advanced</a>
                       </li>
                       <li>
-                        <a href="#">Gerenciamento</a>
+                        <a href="#">Management</a>
                       </li>
                       <li>
-                        <a href="#">Corporativo</a>
+                        <a href="#">Corporate</a>
                       </li>
                       <li>
-                        <a href="#">Clientes</a>
+                        <a href="#">Customer</a>
                       </li>
                       <li>
-                        <a href="#">Informação</a>
+                        <a href="#">Information</a>
                       </li>
                     </ul>
                   </div>
@@ -233,17 +192,16 @@
                     <h4>Explore</h4>
                     <ul>
                       <li>
-                        <a href="#">Biscoitos</a>
+                        <a href="#">Cookies</a>
                       </li>
                       <li>
-                        <a href="#">Sobre</a>
+                        <a href="#">About</a>
                       </li>
                       <li>
-                        <a href="#">Política de Privacidade
-                        </a>
+                        <a href="#">Privacy Policy</a>
                       </li>
                       <li>
-                        <a href="#">Propriedades</a>
+                        <a href="#">Proparties</a>
                       </li>
                       <li>
                         <a href="#">Licenses</a>
@@ -257,7 +215,7 @@
                   <div class="footer-tittle">
                     <h4>Location</h4>
                     <div class="footer-pera">
-                      <p class="info1">Inscreva-se agora para receber atualizações diárias</p>
+                      <p class="info1">Subscribe now to get daily updates</p>
                     </div>
                   </div>
                   <!-- Form -->
@@ -284,7 +242,7 @@
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     Copyright &copy;<script>
                                       document.write(new Date().getFullYear())
-                                    </script>Todos os direitos reservados | Fabricio Lima  <i class="fa fa-heart" aria-hidden="true"></i> 
+                                    </script>Todos direitos reservados | Fabricio Lima  <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
                     <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                   </p>
                 </div>
@@ -328,7 +286,7 @@
     <script src="{% static './assets/js/jquery.magnific-popup.js' %}"></script>
 
     <!-- Date Picker -->
-    <script src="{% static './assets/js/gijgo.min.js ' %}"></script>
+    <script src="{% static './assets/js/gijgo.min.js' %}"></script>
     <!-- Nice-select, sticky -->
     <script src="{% static './assets/js/jquery.nice-select.min.js' %}"></script>
     <script src="{% static './assets/js/jquery.sticky.js' %}"></script>

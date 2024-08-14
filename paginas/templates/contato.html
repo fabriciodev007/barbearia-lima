@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="x-ua-compatible" content="ie=edge" />
-    <title>Barber HTML-5 Template</title>
+    <title>Contato</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="shortcut icon" type="image/x-icon" href="{% static 'assets/img/favicon.ico' %}" />
@@ -63,30 +63,17 @@
                           <a href="services.html">Services</a>
                         </li>
                         <li>
-                          <a href="portfolio.html">Portfolio</a>
+                          <a href="{% url 'paginas-galeria' %}">Galeria</a>
                         </li>
-                        <li>
-                          <a href="blog.html">Blog</a>
-                          <ul class="submenu">
-                            <li>
-                              <a href="blog.html">Blog</a>
-                            </li>
-                            <li>
-                              <a href="blog_details.html">Blog Details</a>
-                            </li>
-                            <li>
-                              <a href="elements.html">Element</a>
-                            </li>
-                          </ul>
-                        </li>
+
                         <li class="active">
-                          <a href="{% url 'paginas-contato' %}">Contact</a>
+                          <a href="{% url 'paginas-contato' %}">Contato</a>
                         </li>
                       </ul>
                     </nav>
                   </div>
                   <div class="header-right-btn f-right d-none d-lg-block ml-30">
-                    <a href="from.html" class="btn header-btn">became a member</a>
+                    <a href="from.html" class="btn header-btn">Seja Membro</a>
                   </div>
                 </div>
               </div>
@@ -428,8 +415,8 @@
               <div class="media contact-info">
                 <span class="contact-info__icon"><i class="ti-email"></i></span>
                 <div class="media-body">
-                  <h3>support@colorlib.com</h3>
-                  <p>Send us your query anytime!</p>
+                  <h3>fabricio.dev007@gmail.com</h3>
+                  <p>Envie-nos sua dúvida a qualquer momento!</p>
                 </div>
               </div>
             </div>
@@ -440,7 +427,7 @@
     </main>
     <footer>
       <!-- ? Footer Start -->
-      <div class="footer-area section-bg" data-background="assets/img/gallery/footer_bg.png">
+      <div class="footer-area section-bg" data-background="{% static 'assets/img/gallery/footer_bg.png' %}">
         <div class="container">
           <div class="footer-top footer-padding">
             <div class="row d-flex justify-content-between">
